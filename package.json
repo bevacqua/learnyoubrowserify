@@ -19,11 +19,14 @@
   "scripts": {
     "test": "node test/solutions.js"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "tape": "^3.0.0"
+  },
   "dependencies": {
     "adventure": "^2.8.0",
     "adventure-verify": "^2.2.0",
     "browser-unpack": "^1.0.0",
+    "browserify": "^6.0.3",
     "concat-stream": "^1.4.6"
   }
 }
