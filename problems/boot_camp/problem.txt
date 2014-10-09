@@ -1,0 +1,20 @@
+First of all, make sure you have `browserify` installed as a command in
+your $PATH.
+
+You can do this by running:
+
+  npm install -g browserify
+
+If you get permission errors, try putting `sudo` in front of that command.
+
+Once you have browserify installed, write a program that prints the string
+'PONY FOO' using `console.log()`.
+
+Compile your program with `browserify` and pipe the bundle into
+`$ADVENTURE_COMMAND verify` like this:
+
+  browserify main.js | $ADVENTURE_COMMAND verify
+
+If you just want to run your solution without verifying you can do:
+
+  browserify main.js | $ADVENTURE_COMMAND run

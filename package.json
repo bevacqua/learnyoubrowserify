@@ -13,8 +13,17 @@
     "type": "git",
     "url": "git://github.com/bevacqua/pony-adventure.git"
   },
-  "devDependencies": {
+  "bin": {
+    "pony-adventure": "bin/pony"
   },
+  "scripts": {
+    "test": "node test/solutions.js"
+  },
+  "devDependencies": {},
   "dependencies": {
+    "adventure": "^2.8.0",
+    "adventure-verify": "^2.2.0",
+    "browser-unpack": "^1.0.0",
+    "concat-stream": "^1.4.6"
   }
 }
