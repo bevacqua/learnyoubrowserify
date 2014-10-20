@@ -1,4 +1,4 @@
-# pony-adventure
+# browserify-pony
 
 > An adventure through the fantastic world of Browserify!
 

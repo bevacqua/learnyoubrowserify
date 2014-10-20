@@ -1,8 +1,8 @@
 {
-  "name": "pony-adventure",
+  "name": "browserify-pony",
   "description": "An adventure through the fantastic world of Browserify!",
   "version": "1.0.0",
-  "homepage": "https://github.com/bevacqua/pony-adventure",
+  "homepage": "https://github.com/bevacqua/browserify-pony",
   "author": {
     "name": "Nicolas Bevacqua",
     "email": "ng@bevacqua.io",
@@ -11,10 +11,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/bevacqua/pony-adventure.git"
+    "url": "git://github.com/bevacqua/browserify-pony.git"
   },
   "bin": {
-    "pony-adventure": "bin/pony"
+    "pony": "bin/pony"
   },
   "scripts": {
     "test": "node test/solutions.js"
