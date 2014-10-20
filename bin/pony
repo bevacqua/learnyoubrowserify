@@ -4,7 +4,7 @@
 
 var path = require('path');
 var adventure = require('adventure');
-var shop = adventure('browserify-pony');
+var shop = adventure('learnyoubrowserify');
 var ignored = /^!/;
 var names = require('../menu.json').filter(unignored);
 var args = process.argv.slice(2);

@@ -1,4 +1,4 @@
-# browserify-pony
+# learnyoubrowserify
 
 > An adventure through the fantastic world of Browserify!
 
