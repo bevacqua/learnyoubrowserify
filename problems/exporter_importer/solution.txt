@@ -6,7 +6,7 @@ Here's the reference solution:
   function approximate (data) {
     var seconds = estimate.text(String(data));
     var human = moment.duration(seconds, 'seconds').humanize();
-    return 'That should take you around ' + human + ' to read';
+    return 'That should take you approximately ' + human + ' to read';
   }
 
   module.exports = approximate;

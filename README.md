@@ -1,15 +1,29 @@
 # learnyoubrowserify
 
-> An adventure through the fantastic world of Browserify!
+> An adventure through the fantastic world of [Browserify][2]!
 
-Adventures
+This adventure is similar to [browserify-adventure][1], except it doesn't aim to exhaustively cover the features in [Browserify][2] but rather provide entertaining problems that display use cases for Browserify. In following these adventures may you find inspiration and real-world reasons to use Browserify in your favorite production applications!
 
-- Understanding CommonJS in Node and porting a simple module to the browser
-- Creating a module for Node and providing a different implementation in the browser
-- Creating a module that replaces the persistance model to `localStorage` in the browser
-- Querying the DOM using Dominus and handling AJAX with Measly
-- Using Taunus to create a shared-rendering progressively enhanced experience
+- Boot Camp
+- Exporter Importer
+- Ride Sharing
+
+# Further Reading
+
+- [Browserify Handbook][3]
+- [A Gentle Browserify Walkthrough][4]
+- [Building High-Quality Front-End Modules][5]
+- [Taunus: Micro Isomorphic MVC Framework][6]
+- [Modularizing Your Front-End][7]
 
 # License
 
 MIT
+
+[1]: https://github.com/substack/browserify-adventure
+[2]: http://browserify.org/
+[3]: https://github.com/substack/browserify-handbook
+[4]: http://ponyfoo.com/articles/a-gentle-browserify-walkthrough
+[5]: http://ponyfoo.com/articles/building-high-quality-front-end-modules
+[6]: http://ponyfoo.com/articles/taunus-micro-isomorphic-mvc-framework
+[7]: http://ponyfoo.com/articles/modularizing-your-front-end

@@ -1,0 +1,15 @@
+Reusing code between the client and the server has always
+been a hard problem to solve in the web platform. Browserify
+makes this easier simply by sharing a module system with Node.js
+If you're using both Browserify and Node, then you can think of
+CommonJS as Docker for your JavaScripts.
+
+Sometimes you have different reasons to execute code on each side. Maybe
+you'll validate on the client-side for UX, and on the server for security.
+
+Another use case of code reuse is when you need to change some implementation
+details because of feature availability on different platforms. In browsers,
+you have things like `WebWorker`s, `localStorage`, `XMLHttpRequest`,
+and the DOM, to name a few.
+
+In this problem
