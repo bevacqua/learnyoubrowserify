@@ -14,7 +14,7 @@
     "url": "git://github.com/bevacqua/learnyoubrowserify.git"
   },
   "bin": {
-    "pony": "bin/pony"
+    "learnyoubrowserify": "bin/learnyoubrowserify"
   },
   "scripts": {
     "test": "node test/solutions.js"
