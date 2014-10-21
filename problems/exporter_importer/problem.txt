@@ -1,0 +1,38 @@
+This time we're going to develop a small program that prints a human-readable
+approximation of how long a piece of text would take to read.
+The verifier will call your code. It will do something like this:
+
+  var approximate = require('approximate');
+
+  approximate('The quick brown fox jumps over the lazy dog');
+
+To get time estimates, you can get the `estimate` module from npm.
+
+  npm install estimate
+
+You can then do `require('estimate')` to get an object with a `.text(data)`
+method that's able to estimate how long it'd take someone to read that chunk
+of data, in seconds.
+
+Just printing out the duration in seconds won't cut it, though. We demand that
+you produce human-readable output.
+For that purpose we suggest you use `moment`, also on npm.
+
+  npm install moment
+
+Moment has an extensive API (momentjs.com/docs), but right now we're only
+interested in `moment.duration(data, 'seconds')`. Once you've created the
+moment object, you'll be able to `.humanize()` it into something readable.
+
+Your program is expected to print a message like the following.
+
+  'That should take you approximately 32 minutes to read'
+
+Compile your program with `browserify -r ./approximate.js:approximate` to create a
+bundle that will expose `require('approximate')` to the environment and pipe the
+bundle output into `$ADVENTURE_COMMAND verify` like this:
+
+  browserify -r ./approximate.js:approximate | $ADVENTURE_COMMAND verify
+
+Your solution will be tested with a few different inputs. Keep in mind that you
+should threat falsy input as an empty string!

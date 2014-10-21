@@ -8,7 +8,7 @@ You can do this by running:
 If you get permission errors, try putting `sudo` in front of that command.
 
 Once you have browserify installed, write a program that prints the string
-'PONY FOO' using `console.log()`.
+`'PONY FOO'` using `console.log()`.
 
 Compile your program with `browserify` and pipe the bundle into
 `$ADVENTURE_COMMAND verify` like this:

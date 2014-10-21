@@ -73,6 +73,6 @@ function plan (t) {
 }
 
 function cmd (args) {
-  var script = path.join(__dirname, '../bin/pony');
+  var script = path.join(__dirname, '../bin/learnyoubrowserify');
   return spawn(process.execPath, [script].concat(args));
 }

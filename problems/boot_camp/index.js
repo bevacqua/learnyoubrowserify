@@ -27,9 +27,11 @@ api.verify = verify({ modeReset: true }, function (args, t) {
     t.deepEqual(rows[0].deps, {}, 'shouldn\'t have any deps');
 
     Function(['console'], body.toString())({
-      log: function (msg) { t.equal(msg, 'PONY FOO') },
-        error: console.error
-      });
+      log: function (msg) {
+        t.equal(msg, 'PONY FOO')
+      },
+      error: console.error
+    });
   }));
 });
 
