@@ -1,15 +1,72 @@
-Reusing code between the client and the server has always
-been a hard problem to solve in the web platform. Browserify
-makes this easier simply by sharing a module system with Node.js
-If you're using both Browserify and Node, then you can think of
-CommonJS as Docker for your JavaScripts.
+In this problem you'll build a module that works differently in the browser
+and the server-side. Your module will be used to persist data locally.
+In the browser it should save things to `localStorage`, while on the
+server, the file system should be used. You can use the `'fs'` module for that.
 
-Sometimes you have different reasons to execute code on each side. Maybe
-you'll validate on the client-side for UX, and on the server for security.
+Your module should expose an API with three methods, `save`, `get`,
+and `remove`. All these methods should be asynchronous, for greater flexibility.
 
-Another use case of code reuse is when you need to change some implementation
-details because of feature availability on different platforms. In browsers,
-you have things like `WebWorker`s, `localStorage`, `XMLHttpRequest`,
-and the DOM, to name a few.
+  save(key, data, done)
 
-In this problem
+This method should take a piece of data, and save it as a JSON string
+under the provided `key`.
+When you're done, you should call the `done(err)` callback passing in an
+error object, if an error occurs.
+
+Here's an example usage:
+
+  save('soda', {
+    id: 30,
+    name: 'Funky Flaves',
+    flavor: 'tasty mustard'
+  }, function (err) {
+    console.log('done!', err);
+  });
+
+Then there's the `get` method.
+
+  get(key, done)
+
+This method should retrieve the piece of data associated with `key`, parse
+the JSON data contained in it, and return it. The `done` callback expects
+an optional error message and the actual data.
+
+Example usage:
+
+  get('soda', function (err, soda) {
+    if (err) {
+      console.log(err); return;
+    }
+    render('soda-can-view', soda);
+  });
+
+Tip: for the server-side implementation you can use `sanitize-filename` from
+npm in order to use data keys as file names!
+
+  var sanitize = require('sanitize-filename');
+  var filename = sanitize(key);
+
+Lastly there's the `remove` method.
+
+  remove(key, done)
+
+This one should delete the item.
+
+Don't forget to create a `package.json` file like the one below! For the
+purposes of this exercise, please keep all your code in the same directory!
+
+  {
+    "browser": {
+      "./server-side.js": "./client-side.js"
+    }
+  }
+
+That tells Browserify to use the client-side implementation when compiling
+for the browser! Once you're done implementing both modules, you can verify
+your solution with the following command:
+
+  $ADVENTURE_COMMAND verify server-side.js
+
+If you just want to run your solution without verifying you can do:
+
+  $ADVENTURE_COMMAND run server-side.js

@@ -36,3 +36,7 @@ bundle output into `$ADVENTURE_COMMAND verify` like this:
 
 Your solution will be tested with a few different inputs. Keep in mind that you
 should threat falsy input as an empty string!
+
+If you just want to run your solution without verifying you can do:
+
+  browserify -r ./approximate.js:approximate | $ADVENTURE_COMMAND run

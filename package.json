@@ -28,6 +28,8 @@
     "browser-unpack": "^1.0.0",
     "browserify": "^6.0.3",
     "concat-stream": "^1.4.6",
-    "glob": "^4.0.6"
+    "contra": "^1.6.10",
+    "glob": "^4.0.6",
+    "sanitize-filename": "^1.1.1"
   }
 }
